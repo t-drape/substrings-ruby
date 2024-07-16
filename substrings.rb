@@ -11,6 +11,7 @@ def substrings(text, dictionary)
   # Make sure method works for one word
   word_locase = text.downcase
   new_dictionary_words_locase = dictionary.map {|word| word.downcase}
+  p word_locase
 
 
   # Step 3a: 
@@ -30,10 +31,6 @@ def substrings(text, dictionary)
       end
     end
   end
-
-  # Step 4:
-  return substrings_key_element_from_dict_value_one
-  # Return Hash
   
   # Step 4:
   # Allow to method to accept multiple words
@@ -57,8 +54,9 @@ def substrings(text, dictionary)
   # Else, set value equal to 1
   # Step 6:
   # Return new Hash  
+  return substrings_key_element_from_dict_value_one
 end
 
 
-substrings("below", dictionary)
+substrings("below, around, above", dictionary)
 
