@@ -8,7 +8,7 @@ def substrings(text, dictionary)
   substrings_key_element_from_dict_value_one = Hash.new
   # Step 3:
     # Make sure method works for one word
-  word_locase = text.downcase
+  word_locase = text.downcase.split()
   new_dictionary_words_locase = dictionary.map {|word| word.downcase}
 
 
@@ -18,7 +18,7 @@ def substrings(text, dictionary)
     # Allow to method to accept multiple words
   # Step 4a:
     # Access every element of text
-  for text_word in word_locase.split()
+  for text_word in word_locase
     # Step 4b: 
       # For every text element, access every element of dictionary
     for word in new_dictionary_words_locase
@@ -35,7 +35,7 @@ def substrings(text, dictionary)
             # Set dictionary element value equal to 1
           # Step 4e:
             # Set value of dictionary element to 1
-            
+
           # Step 5:
             # While accessing every element of text,
           # Step 5a:
